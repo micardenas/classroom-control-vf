@@ -43,7 +43,8 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
-  
+
+  /*
   file { '/etc/motd':
     ensure => file,
     path => '/etc/motd',
@@ -53,12 +54,18 @@ node default {
     content => 'Puppet is awesome',
     
   }
-    
+   */
+
   host { 'testing.puppetlabs.vm':
-  ensure       => 'present',
-  ip           => '127.0.0.1',
-  target       => '/etc/hosts',
+    ensure       => 'present',
+    ip           => '127.0.0.1',
+    target       => '/etc/hosts',
   
+  }
+
+  exec {'updatemotd':
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+    path    => '/usr/local/bin',
   }
 
 }
