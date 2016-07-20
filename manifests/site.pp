@@ -66,7 +66,10 @@ node default {
   exec {'updatemotd':
     command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
     path    => '/usr/local/bin',
+<<<<<<< HEAD
     creates => '/etc/motd'
+=======
+>>>>>>> 183494537957f2edce9f4803c197ad0b78a31c5f
   }
 
 }
