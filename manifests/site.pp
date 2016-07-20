@@ -46,7 +46,7 @@ node default {
 
   notify { "Hello, my name is ${::hostname}": }
 
-  /*
+
   file { '/etc/motd':
     ensure => file,
     path => '/etc/motd',
@@ -56,8 +56,7 @@ node default {
     content => 'Puppet is awesome',
     
   }
-   */
-/*
+
   host { 'testing.puppetlabs.vm':
     ensure       => 'present',
     ip           => '127.0.0.1',
@@ -73,6 +72,6 @@ node default {
   }
   include users
   include skeleton
-*/
+
 }
 */
