@@ -1,5 +1,5 @@
 
-class users::createuser {
+class users {
   
   user { 'fundamentals':
     ensure => present,

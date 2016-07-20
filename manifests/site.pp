@@ -69,7 +69,6 @@ node default {
     creates => '/etc/motd',
 
   }
-  
-  include users::createuser
+  #include users::createuser
 
 }
