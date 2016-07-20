@@ -1,0 +1,5 @@
+PORT="11211"
+USER="mecached"
+MAXCONNS="96"
+CACHESIZE="32"
+OPTIONS=""
