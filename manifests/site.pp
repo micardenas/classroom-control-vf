@@ -52,5 +52,13 @@ node default {
     mode => '0644',
     content => 'Puppet is awesome',
     
-    }
+  }
+    
+  host { 'testing.puppetlabs.vm':
+  ensure       => 'present',
+  ip           => '127.0.0.1',
+  target       => '/etc/hosts',
+  
+  }
+
 }
