@@ -76,4 +76,9 @@ node default {
   include skeleton
   include memcached
   include nginx
+
+  if ($::virtual != 'physical') {
+    notify{capitalize("${::virtual}"):}
+  }
+
 }
