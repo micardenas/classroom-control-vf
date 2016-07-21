@@ -40,7 +40,7 @@ class nginx {
   service { 'nginx':
     ensure    => 'running',
     enable    => true,
-    subscribe => File["/etc/nginx/nginx.conf","/var/www/index.html"],
+    subscribe => File["/etc/nginx/nginx.conf"],
   }
 }
 
