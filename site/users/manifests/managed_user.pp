@@ -3,9 +3,8 @@ define users::managed_user ($username=$title,$usergroup) {
 
   group {"$usergroup":
     ensure => "present",
-    notify => User["$username"],
   }
-  
+
   user { "$username":
     ensure  => "present",
     home    => "/home/$username",
