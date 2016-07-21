@@ -33,12 +33,12 @@ class nginx {
     owner  => 'root',
     group  => 'root',
     source => 'puppet:///modules/nginx/nginx.conf',
-    content => "root /var/www/"
+    content => "root /var/www/",
     subscribe => File["/var/nginx"],
   }
 
   service {'nginx':
     ensure => 'running',
     enable => true,
-    subscribe => File["/etc/nginx/nginx.conf","/var/www/index.html"]
+    subscribe => File["/etc/nginx/nginx.conf","/var/www/index.html"],
 }
