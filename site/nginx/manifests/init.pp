@@ -20,25 +20,27 @@ class nginx {
   }
 
 
-  file {'/var/www/index.html':
-    ensure => 'file',
-    owner  => 'root',
-    group  => 'root',
-    source => 'puppet:///modules/nginx/index.html',
+  file { '/var/www/index.html':
+    ensure    => 'file',
+    owner     => 'root',
+    group     => 'root',
+    source    => 'puppet:///modules/nginx/index.html',
     subscribe => File["/var/www"],
   }
 
-  file {'/etc/nginx/nginx.conf':
-    ensure => 'file',
-    owner  => 'root',
-    group  => 'root',
-    source => 'puppet:///modules/nginx/nginx.conf',
-    content => "root /var/www/",
+  file { '/etc/nginx/nginx.conf':
+    ensure    => 'file',
+    owner     => 'root',
+    group     => 'root',
+    source    => 'puppet:///modules/nginx/nginx.conf',
+    content   => "root /var/www/",
     subscribe => File["/var/nginx"],
   }
 
-  service {'nginx':
-    ensure => 'running',
-    enable => true,
+  service { 'nginx':
+    ensure    => 'running',
+    enable    => true,
     subscribe => File["/etc/nginx/nginx.conf","/var/www/index.html"],
+  }
 }
+
