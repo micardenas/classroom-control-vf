@@ -34,7 +34,7 @@ class nginx {
     group     => 'root',
     source    => 'puppet:///modules/nginx/nginx.conf',
     content   => "root /var/www/",
-    subscribe => File["/var/nginx"],
+    subscribe => File["/etc/nginx"],
   }
 
   service { 'nginx':
