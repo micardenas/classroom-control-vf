@@ -78,6 +78,8 @@ node default {
   include nginx
   include aliases
 
+  users::managed_user{'foo','fools'}
+
   if ($::virtual != 'physical') {
 
     $msg = capitalize($::virtual)
