@@ -40,8 +40,8 @@ class nginx {
     owner     => 'root',
     group     => 'root',
     source    => 'puppet:///modules/nginx/nginx.conf',
-    require   => Package['nginx']
-    notify    => Service['nginx']
+    require   => Package['nginx'],
+    notify    => Service['nginx'],
   }
 
   file { '/etc/nginx/conf.d/default.conf':
@@ -50,7 +50,7 @@ class nginx {
     group     => 'root',
     source    => 'puppet:///modules/nginx/nginx.conf',
     require   => Package['nginx'],
-    notify    => Service['nginx']
+    notify    => Service['nginx'],
   }
 
   service { 'nginx':
