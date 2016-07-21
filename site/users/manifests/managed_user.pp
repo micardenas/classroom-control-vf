@@ -13,7 +13,7 @@ define users::managed_user ($username=$title,$usergroup) {
 
   file { ["/home/$username","/home/$username/.ssh"]:
     ensure => 'directory',
-    mode   => '0600',
+    mode   => '0700',
   }
 
 }
