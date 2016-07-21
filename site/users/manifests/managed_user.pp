@@ -8,7 +8,7 @@ define users::managed_user ($username=$title,$usergroup) {
   user { "$username":
     ensure  => "present",
     home    => "/home/$username",
-    group   => $usergroup,
+    group   => "$usergroup",
     notify  => File["ssh_home"],
   }
 
