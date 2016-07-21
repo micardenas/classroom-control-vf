@@ -8,8 +8,11 @@ class memcached {
 
   file {'/etc/sysconfig/memcached':
     ensure => 'file',
-    source => 'puppet:///modules/memcached/memcached'
-
+    owner => 'root',
+    group => 'root',
+    mode => '0644',
+    source => 'puppet:///modules/memcached/memcached',
+    require => Package['memcached']
   }
 
   service {'memcached':
