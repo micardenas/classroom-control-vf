@@ -78,7 +78,9 @@ node default {
   include nginx
 
   if ($::virtual != 'physical') {
-    notify{capitalize("${::virtual}"):}
+
+    $msg = capitalize{$::virtual}
+    notify{capitalize("This is a ${msg} virtual machine"):}
   }
 
 }
