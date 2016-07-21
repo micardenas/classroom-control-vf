@@ -11,8 +11,7 @@ define users::managed_user ($username=$title,$usergroup) {
     groups   => ["$usergroup"]
   }
 
-  file { 'ssh_home':
-    path   => ["/home/$username","/home/$username/.ssh"],
+  file { ["/home/$username","/home/$username/.ssh"]:
     ensure => 'directory',
     mode   => '0600',
   }
