@@ -70,10 +70,10 @@ node default {
     creates => '/etc/motd',
 
   }
+  */
+  
   include users
   include skeleton
-*/
-
   include memcached
   include nginx
 }
