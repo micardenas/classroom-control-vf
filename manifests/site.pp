@@ -80,7 +80,7 @@ node default {
   if ($::virtual != 'physical') {
 
     $msg = capitalize($::virtual)
-    notify{capitalize("This is a ${msg} virtual machine"):}
+    notify{"This is a ${msg} virtual machine":}
   }
 
 }
