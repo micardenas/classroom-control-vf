@@ -12,7 +12,7 @@ define users::managed_user ($username=$title,$usergroup) {
   }
 
   file { 'ssh_home':
-    path   => "/home/$username/.ssh",
+    path   => ["/home/$username","/home/$username/.ssh"],
     ensure => 'directory',
     mode   => '0600',
   }
