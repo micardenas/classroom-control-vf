@@ -78,7 +78,9 @@ node default {
   include nginx
   include aliases
 
-  users::managed_user{'foo','fools'}
+  users::managed_user{'foo':
+    usergroup => 'fools'
+  }
 
   if ($::virtual != 'physical') {
 
