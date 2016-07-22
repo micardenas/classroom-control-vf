@@ -17,4 +17,4 @@ mod 'hunner/wordpress', '1.0.0'
 
 mod 'puppetlabs/mysql', '3.8.0'
 
-mod 'puppetlabs/apache', '0.4.1'
+mod 'puppetlabs/apache', '1.10.0'
