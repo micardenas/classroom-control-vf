@@ -1,6 +1,6 @@
 class nginx (
-  $docroot = undef,
-){
+  $docroot = $nginx::params::$paramsdocroot,
+) inherits nginx::params {
 
   notify {"This is docroot $docroot": }
 

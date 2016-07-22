@@ -77,9 +77,11 @@ node default {
   include memcached
   #include nginx
 
-  class {'nginx':
-    docroot => '/var/www3'
+  class {'params':
+    docroot => '/var/www4'
   }
+
+  include nginx
 
   include aliases
 
