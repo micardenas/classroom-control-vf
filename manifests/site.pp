@@ -30,7 +30,7 @@ ini_setting { 'random ordering':
 
 node 'micardenas.puppetlabs.vm' {
 
-  include profile::blog
+  include role::blog
 
 }
 
