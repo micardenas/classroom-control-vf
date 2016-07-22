@@ -2,6 +2,8 @@ class nginx (
   $docroot = undef,
 ){
 
+  notify {"This is docroot $docroot": }
+
   File {
     owner => 'root',
     group => 'root',
