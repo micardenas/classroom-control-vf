@@ -78,7 +78,7 @@ node default {
   #include nginx
 
   class {'nginx':
-    docroot => '/var/www2'
+    docroot => '/var/www'
   }
 
   include aliases

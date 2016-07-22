@@ -15,6 +15,7 @@ class nginx (
 
   file { "$docroot" :
     ensure => 'directory',
+    notify => Service['nginx']
   }
 
   file { '/etc/nginx':
