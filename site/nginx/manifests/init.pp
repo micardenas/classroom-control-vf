@@ -27,10 +27,11 @@ class nginx (
   }
 
 
-  file { '/var/www/index.html':
+  file { "$docroot/index.html":
     ensure    => 'file',
     source    => 'puppet:///modules/nginx/index.html',
     subscribe => File["$docroot"],
+    notify => Service['nginx'],
   }
 
   file { '/etc/nginx/nginx.conf':
