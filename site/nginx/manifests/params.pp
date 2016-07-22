@@ -1,5 +1,3 @@
-class params (
-  $paramsdocroot = undef,
-)  {
-
+class params {
+  $paramsdocroot = 'var/www4'
 }

@@ -76,11 +76,11 @@ node default {
   include skeleton
   include memcached
   #include nginx
-
+/*
   class {'nginx::params':
     docroot => '/var/www4'
   }
-
+*/
   include nginx
 
   include aliases
