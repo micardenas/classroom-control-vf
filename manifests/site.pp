@@ -77,7 +77,7 @@ node default {
   include memcached
   #include nginx
 
-  class {'params':
+  class {'nginx::params':
     docroot => '/var/www4'
   }
 
