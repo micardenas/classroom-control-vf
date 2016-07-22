@@ -6,6 +6,6 @@
    :datadir: "/etc/puppetlabs/code/environments/micardenas_production/hieradata"
 
 :hierarchy:
-  - nodes/micardenas.puppetlabs.vm.yaml
+  - "nodes/${::clientcert}"
   - common
   - global
