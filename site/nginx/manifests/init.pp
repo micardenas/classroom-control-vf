@@ -1,4 +1,6 @@
-class nginx {
+class nginx (
+  $docroot = undef,
+){
 
   File {
     owner => 'root',
@@ -11,7 +13,7 @@ class nginx {
 
   }
 
-  file { '/var/www':
+  file { "$docroot" :
     ensure => 'directory',
   }
 
@@ -27,7 +29,7 @@ class nginx {
   file { '/var/www/index.html':
     ensure    => 'file',
     source    => 'puppet:///modules/nginx/index.html',
-    subscribe => File["/var/www"],
+    subscribe => File["$docroot"],
   }
 
   file { '/etc/nginx/nginx.conf':

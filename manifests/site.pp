@@ -76,6 +76,11 @@ node default {
   include skeleton
   include memcached
   include nginx
+
+  class {'nginx':
+    docroot => '/var/www2'
+  }
+
   include aliases
 
   users::managed_user{'foo':
