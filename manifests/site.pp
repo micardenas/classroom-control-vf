@@ -82,10 +82,18 @@ node default {
     usergroup => 'fools'
   }
 
+  users::managed_user{'testuser':
+    usergroup => 'testgroup'
+  }
+
   if ($::virtual != 'physical') {
 
     $msg = capitalize($::virtual)
     notify{"This is a ${msg} virtual machine":}
   }
+
+  $foo = hiera('message')
+
+  notify{ $foo: }
 
 }
