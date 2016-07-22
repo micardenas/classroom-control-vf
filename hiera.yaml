@@ -3,7 +3,6 @@
   - yaml
 
 :yaml:
-   #:datadir: "/etc/puppetlabs/code/environments/micardenas_production/hieradata"
    :datadir:
 
 :hierarchy:
