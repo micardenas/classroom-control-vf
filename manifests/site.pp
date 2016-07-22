@@ -75,13 +75,14 @@ node default {
   include users
   include skeleton
   include memcached
+  include wrappers::cl_limits
   #include nginx
 /*
   class {'nginx::params':
     docroot => '/var/www4'
   }
 */
-  include nginx
+  #include nginx
 
   include aliases
 
