@@ -7,4 +7,5 @@
 
 :hierarchy:
   - common
+  - nodes/micardenas.puppetlabs.vm.yaml
   - global
