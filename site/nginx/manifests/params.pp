@@ -1,3 +1,3 @@
 class nginx::params {
-  $paramsdocroot = 'var/www4'
+  $paramsdocroot = '/var/www4'
 }
