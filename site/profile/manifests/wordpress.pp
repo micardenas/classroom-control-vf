@@ -1,4 +1,4 @@
 class profile::wordpress {
 
-  cass {'wordpress':}
+  class { 'wordpress': }
 }
